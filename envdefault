@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+known=' '
+while read -r -d $'\0' line ; do
+	key="${line%%=*}"
+	known="$known $key "
+done < <(env -0)
+
+while read -r -d $'\0' line ; do
+	key="${line%%=*}"
+	[ -z "${known##* $key *}" ] && continue
+	val="${line#*=}"
+	echo export "$key='$val'"
+	eval $line
+done < <(source ${1:-/dev/stdin} >/dev/null 2>&1; env -0)

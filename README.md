@@ -23,7 +23,7 @@ After sourcing `defaults` (securely, inside a temporary subshell), envdefault fi
 1. The variable FOO had already been set, so it can be ignored.
 1. The variable DOG is new, so print that value (and export it).
 
-One can directly [Source](#Source) envdefault, but one can also imagine using envdefault via eval- `eval $(envdefault defaults)` as a namesake way to load environment variables at a low, "default" priority.
+One can directly [Source](#source) envdefault, but one can also imagine using envdefault via eval- `eval $(envdefault defaults)` as a namesake way to load environment variables at a low, "default" priority.
 
 ## Stdin
 

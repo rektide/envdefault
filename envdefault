@@ -2,12 +2,12 @@
 set -e
 
 known=' '
-while read -r -d $'\0' line ; do
+while read -r -d '' line ; do
 	key="${line%%=*}"
 	known="$known $key "
 done < <(env -0)
 
-while read -r -d $'\0' line ; do
+while read -r -d '' line ; do
 	key="${line%%=*}"
 	[ -z "${known##* $key *}" ] && continue
 	val="${line#*=}"

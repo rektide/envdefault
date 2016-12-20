@@ -1,0 +1,18 @@
+{
+	"name": "envdefault",
+	"version": "1.0.1",
+	"description": "Set defaults for environment variables not already set",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"bins": {
+		"envdefault": "./envdefault"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://archive.eldergods.com/envdefault"
+	},
+	"keywords": [],
+	"author": "rektide de la faye",
+	"license": "X11"
+}

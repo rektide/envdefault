@@ -1,16 +1,16 @@
 #!/bin/bash
 set -e
 
-known=' '
+__envdefault_known=' '
 while read -r -d '' line ; do
 	key="${line%%=*}"
-	known="$known $key "
+	__envdefault_known="$__envdefault_known $key "
 done < <(env -0)
 
 while read -r -d '' line ; do
 	key="${line%%=*}"
-	[ -z "${known##* $key *}" ] && continue
+	[ -z "${__envdefault_known##* $key *}" ] && continue
 	val="${line#*=}"
 	echo export "$key='$val'"
-	eval $line
+	export $key="$val"
 done < <(source ${1:-/dev/stdin} >/dev/null 2>&1; env -0)

@@ -19,6 +19,7 @@ envdefault defaults
 Would output `export DOG=shibe`.
 
 After sourcing `defaults` (securely, inside a temporary subshell), envdefault finds:
+
 1. The variable FOO had already been set, so it can be ignored.
 1. The variable DOG is new, so print that value (and export it).
 

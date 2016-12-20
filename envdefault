@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 __envdefault_known=' '
 while read -r -d '' line ; do

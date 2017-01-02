@@ -1,11 +1,11 @@
 {
 	"name": "envdefault",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"description": "Set defaults for environment variables not already set",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"bins": {
+	"bin": {
 		"envdefault": "./envdefault"
 	},
 	"repository": {
